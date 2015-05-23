@@ -1,0 +1,21 @@
+head
+  title WEW
+
+
+body
+  +esInput index="resources" placeholder="search ..."
+  table.table
+    thead
+      tr
+        th 資料名稱
+        th 資料格式
+        th 連結
+        th 來源
+    tbody
+      +esEach index="resources"
+        tr
+          td {{meta}}
+          td {{format}}
+          td 
+            a(href="{{link}}", target="_blank") 請點我
+          td {{source}}
