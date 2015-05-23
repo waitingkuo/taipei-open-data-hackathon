@@ -1,0 +1,14 @@
+.type-btn:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+.type-btn.active {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+body {
+  background: #b37b02 !important;
+}
+
+.search-bar input {
+  color: white !important;
+  background: rgba(146, 93, 2, 0.65) !important;
+}

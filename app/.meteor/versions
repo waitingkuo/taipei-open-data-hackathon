@@ -34,6 +34,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mquandalle:jade@0.4.3
 mquandalle:jade-compiler@0.4.3
+natestrauser:font-awesome@4.3.0
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 random@1.0.3

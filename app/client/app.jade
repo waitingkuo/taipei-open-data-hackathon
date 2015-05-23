@@ -1,0 +1,54 @@
+head
+  title Taiwan Open Data Search
+  
+
+body
+  //+search
+  .search-bg
+    .main-search
+      .search
+        h1 Search
+        .search-bar
+          form
+            +esInput index="resources" placeholder="search ..."
+
+
+  div(style="text-align: center; width: 100px; margin: auto auto;")
+    ul.nav.nav-pills
+      li.active(role="presentation")
+        a.type-btn(href="#type1", role="tab", data-toggle="tab")
+          i.fa.fa-th-list(style="color:white;")
+          //i.fa.fa-th-list
+      li(role="presentation")
+        a.type-btn(href="#type2", role="tab", data-toggle="tab")
+          i.fa.fa-list(style="color:white;")
+          //i.fa.fa-list
+
+  .tab-content
+    .tab-pane.active#type1(role="tabpanel")
+      table.table
+        ol
+          +esEach index="resources"
+            li
+              a(href="#")
+                h3 {{meta}}
+              p 資料來源：{{source}}
+              p 資料類型：{{format}}
+              p 連結： {{link}}
+
+    .tab-pane#type2(role="tabpanel", style="margin: 0 20px;")
+      table.table
+        thead
+          tr
+            th 資料名稱
+            th 資料格式
+            th 連結
+            th 來源
+        tbody
+            +esEach index="resources"
+              tr(style="min-height: 50px;")
+                  td {{meta}}
+                  td {{format}}
+                  td 
+                    a(href="{{link}}", target="_blank") 請點我
+                  td {{source}}
